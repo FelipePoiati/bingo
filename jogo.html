@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo de Bingo</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!-- Conteúdo principal do jogo -->
+    <div id="conteudo" class="container">
+      <h1>Jogo de Bingo</h1>
+      <button onclick="document.getElementById('importarCSV').click()">
+        Importar CSV
+      </button>
+      <input
+        type="file"
+        id="importarCSV"
+        accept=".csv"
+        style="display: none"
+        onchange="lerArquivoCSV(event)"
+      />
+      <button onclick="voltarParaGerador()">Menu Principal</button>
+      <div id="numeroSorteado">Número Sorteado:</div>
+      <button id="botaoSortear">Sortear Número</button>
+      <div id="cartelasJogadores"></div>
+    </div>
+
+    <!-- O modal de vencedor será inserido dinamicamente aqui -->
+    
+    <script src="jogo.js"></script>
+  </body>
+</html>
